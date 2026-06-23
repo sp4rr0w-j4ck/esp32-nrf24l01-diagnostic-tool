@@ -99,12 +99,9 @@ of this software and associated documentation files...
 6. Observe the diagnostic result.
 
 ---
-MIT License
+## License
 
-Copyright (c) 2026 sp4rr0w-j4ck
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files...
+This project is licensed under the MIT License - see the LICENSE file for details.
 ## Purpose
 
 This project was created to quickly verify whether an nRF24L01 module is correctly connected and responding before integrating it into larger wireless communication projects.
