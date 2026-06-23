@@ -27,11 +27,11 @@ A lightweight diagnostic sketch for verifying communication between an ESP32 and
 * ESP32 Development Board
 * nRF24L01 or nRF24L01+
 * Jumper wires
-* Stable 3.3V power supply (Recomend LM2596 Buck converter)
-* 100uF electrolitic cappasitor
+* Stable 3.3V power supply (Recommended: LM2596 Buck Converter)
+* 100µF Electrolytic Capacitor
 
 ### ⚡ Critical Hardware Stability Tips
-1. The 100µF Capacitor Fix : Solder or firmly press a **100µF electrolytic capacitor** directly across the `VCC` and `GND` pins right on the nRF24L01 module. This acts as a vital power reservoir to handle sharp electrical spikes. 
+1. The 100µF Capacitor Fix : Solder or firmly press a **100µF electrolytic capacitor** directly across the `VCC` and `GND` pins right on the nRF24L01 module. This acts as a vital power reservoir to handle sharp electrical spikes. 100µF Electrolytic Capacitor
 2. **Watch the Polarity:** Because it is an electrolytic capacitor, it is directional! Ensure the stripe with the **minus symbols (`-`)** connects to the **GND** pin, and the plain/longer leg connects to the **VCC** pin. 
 3. **Common Ground:** If you power the nRF module via an external buck converter, you **must** connect a ground wire from the converter's `GND` line to one of the ESP32's `GND` pins. Without a common ground, the SPI data lines will float randomly, returning endless `0xFF` errors. 
 
