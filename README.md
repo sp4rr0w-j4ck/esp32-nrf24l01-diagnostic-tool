@@ -28,6 +28,12 @@ A lightweight diagnostic sketch for verifying communication between an ESP32 and
 * nRF24L01 or nRF24L01+
 * Jumper wires
 * Stable 3.3V power supply (Recomend LM2596 Buck converter)
+* 100uF electrolitic cappasitor
+
+### ⚡ Critical Hardware Stability Tips
+1. The 100µF Capacitor Fix : Solder or firmly press a **100µF electrolytic capacitor** directly across the `VCC` and `GND` pins right on the nRF24L01 module. This acts as a vital power reservoir to handle sharp electrical spikes. 
+2. **Watch the Polarity:** Because it is an electrolytic capacitor, it is directional! Ensure the stripe with the **minus symbols (`-`)** connects to the **GND** pin, and the plain/longer leg connects to the **VCC** pin. 
+3. **Common Ground:** If you power the nRF module via an external buck converter, you **must** connect a ground wire from the converter's `GND` line to one of the ESP32's `GND` pins. Without a common ground, the SPI data lines will float randomly, returning endless `0xFF` errors. 
 
 ---
 
@@ -79,7 +85,12 @@ Done.
 ---[_ESP32_nRF24L01_Health_Check.zip](https://github.com/user-attachments/files/29261230/_ESP32_nRF24L01_Health_Check.zip)
 
 ## Usage
+MIT License
 
+Copyright (c) 2026 sp4rr0w.j4ck
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files...
 1. Open the sketch in Arduino IDE.
 2. Select your ESP32 board.
 3. Upload the code.
@@ -88,7 +99,12 @@ Done.
 6. Observe the diagnostic result.
 
 ---
+MIT License
 
+Copyright (c) 2026 Sugeeth Gopi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files...
 ## Purpose
 
 This project was created to quickly verify whether an nRF24L01 module is correctly connected and responding before integrating it into larger wireless communication projects.
