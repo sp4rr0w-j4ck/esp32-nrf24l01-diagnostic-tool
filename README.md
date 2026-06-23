@@ -27,7 +27,7 @@ A lightweight diagnostic sketch for verifying communication between an ESP32 and
 * ESP32 Development Board
 * nRF24L01 or nRF24L01+
 * Jumper wires
-* Stable 3.3V power supply
+* Stable 3.3V power supply (Recomend LM2596 Buck converter)
 
 ---
 
